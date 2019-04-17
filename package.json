@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/olsonathan/bamazon#readme",
   "dependencies": {
+    "fast-csv": "^2.4.1",
     "inquirer": "^6.2.2",
     "mysql": "^2.16.0"
   }
