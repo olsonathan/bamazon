@@ -37,16 +37,26 @@ once all the of the questions have been answered the user is given their total a
 ![Fifth]
 ((https://olsonathan.github.com/assets/fifth.jpg)
 
+![Third](https://github.com/olsonathan/bamazon/blob/master/assets/third.PNG)
+
+![fifth](https://github.com/olsonathan/bamazon/blob/master/assets/fifth.PNG)
+
+
 
 *Check Stock* will show all items on hand from the mysql database.
 
 ![six]
 (https://olsonathan.github.com/assets/six.png)
 
+![six](https://github.com/olsonathan/bamazon/blob/master/assets/six.PNG)
+
+
 
 *Restock the items* will recreate the mysql table from the CSV file.
 
 *Exit*
+
+![seven](https://github.com/olsonathan/bamazon/blob/master/assets/seven.PNG)
 
 ![seven]
 (https://github.com/olsonathan/bamazon/blob/master/seven.PNG)
