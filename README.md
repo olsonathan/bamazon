@@ -32,15 +32,25 @@ once all the of the questions have been answered the user is given their total a
 ![Third](https://github.com/olsonathan/bamazon/blob/master/third.PNG)
 
 
-If the user choice is *Manage the system*.  The user will be asked the manager password and with the correct password will have choices to *Check Stock, Restock the items, or go back to the main menu*
+*Manage the system*---  The user will be asked the manager password and with the correct password will have choices to *Check Stock, Restock the items, or go back to the main menu.*
 
 ![Fifth]
-(https://github.com/olsonathan/bamazon/blob/master/Fifth.PNG)
+(https://github.com/olsonathan/bamazon/blob/master/fifth.PNG)
 
 
 *Check Stock* will show all items on hand from the mysql database.
+
+![six]
+(https://github.com/olsonathan/bamazon/blob/master/six.PNG)
+
+
+
 *Restock the items* will recreate the mysql table from the CSV file.
 
+*Exit*
+
+![seven]
+(https://github.com/olsonathan/bamazon/blob/master/seven.PNG)
 
 
 
