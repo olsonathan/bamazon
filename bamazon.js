@@ -41,7 +41,7 @@ function start() {
       choices: [
         "Make a sandwhich tray?",
         "Restock the items?",
-        "exit"
+        "Exit"
       ]
     })
     .then(function(answer) {
@@ -55,7 +55,7 @@ function start() {
         break;
 
                
-      case "exit":
+      case "Exit":
            console.log(" ")
             console.log("\x1b[43m\x1b[30m","Thanks for your business!");
         connection.end();
