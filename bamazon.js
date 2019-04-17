@@ -40,7 +40,7 @@ function start() {
       message: "What would you like to do?",
       choices: [
         "Make a sandwhich tray?",
-        "Restock the items?",
+        "Manage the system",
         "Exit"
       ]
     })
@@ -50,14 +50,15 @@ function start() {
         makeSandwhich();
         break;
 
-      case "Restock the items?":
-        restock();
+      case "Manage the system":
+        password();
         break;
 
                
       case "Exit":
            console.log(" ")
-            console.log("\x1b[43m\x1b[30m","Thanks for your business!");
+            console.log("\x1b[43m\x1b[30m","Thanks for your business!")
+            console.log("\x1b[0m", " ")
         connection.end();
         break;
       }
@@ -518,9 +519,9 @@ function chooseCheese() {
       console.log('\nOrder receipt:');
       console.log(allAnswers);
       console.log(" ")
-      console.log("\x1b[33m%s\x1b[0m", " Your order Total is:  $" + (cost.toFixed(2)))
-      console.log(" ")
-      
+      console.log("\x1b[33m", " Your order Total is:  $" + (cost.toFixed(2)))
+      console.log("\x1b[0m", " ")
+          
 
       inquirer.prompt([
           {
@@ -537,7 +538,8 @@ function chooseCheese() {
             start();
           } else {
             console.log(" ")
-            console.log("\x1b[43m\x1b[30m","Thanks for your business!");
+            console.log("\x1b[43m\x1b[30m","Thanks for your business!")
+            console.log("\x1b[0m", " ")
           
             connection.end();
           }
@@ -566,7 +568,7 @@ function chooseCheese() {
           setTimeout(csv, 3000);
                
          console.log("Everything is fully stocked")
-         start()
+         manager()
         }
  
 
@@ -619,3 +621,79 @@ function chooseCheese() {
       });
       
     }
+
+    function password(){
+
+        inquirer
+          .prompt({
+            name: "password",
+            type: "password",
+            message: "Enter your manager password: 1234"
+           
+          })
+          .then(function(answer) {
+            if (answer.password === "1234"){
+                manager()
+
+            }
+
+        else{
+            console.log("Please try again")
+            password()
+        }
+
+            })
+    
+        };
+    
+    
+    
+    
+    
+    
+    function manager() {
+  
+        
+
+        inquirer
+          .prompt({
+            name: "action",
+            type: "list",
+            message: "What would you like to do?",
+            choices: [
+              "Check Stock",
+              "Restock the items?",
+              "Enter a sandwhich order"
+            ]
+          })
+          .then(function(answer) {
+            switch (answer.action) {
+            case "Check Stock":
+              checkStock();
+              break;
+      
+            case "Restock the items?":
+              restock();
+              break;
+      
+                     
+            case "Enter a sandwhich order":
+                start()
+              break;
+            }
+          });
+      }
+
+
+      function checkStock(){
+        var query = 'SELECT * FROM `products`';
+            connection.query(query, function (err, res, fields) {
+        for (var i = 0; i < res.length; i++) {
+            console.log("\nID: " + res[i].item_id + " || Product Name: " + res[i].product_name + " || Department Name: " + res[i].department_name + 
+            " || Price: " + res[i].price + " || Unit: " + res[i].UM + " || Stock Qty: " + res[i].stock_quantity) ;
+          }
+
+
+      })
+      manager()
+    };
