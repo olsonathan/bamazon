@@ -1,7 +1,7 @@
  
 
 
-** to the Bamazon Sandwhich Tray maker**
+# Welcome to the Bamazon Sandwhich Tray maker
 
 This is an App that uses the CLI to ask the user some questions to build out sandwhich trays.  The front end is some simple questions using the inquirer package, and the backend uses mysql to hold the values that the user has choosen.
 
@@ -31,4 +31,4 @@ once all the of the questions have been answered the user is given their total a
 
 
 
-# bamazon
+## bamazon
