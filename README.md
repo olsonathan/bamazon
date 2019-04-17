@@ -1,11 +1,11 @@
  
 
 
-Welcome to the Bamazon Sandwhich Tray maker
+** to the Bamazon Sandwhich Tray maker**
 
 This is an App that uses the CLI to ask the user some questions to build out sandwhich trays.  The front end is some simple questions using the inquirer package, and the backend uses mysql to hold the values that the user has choosen.
 
-On execution of the node index.js the user has three choices.
+On execution of the *node bamazon.js* the user has three choices.
 
 ![First](https://github.com/olsonathan/bamazon/blob/master/first.PNG)
  
