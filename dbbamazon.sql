@@ -1,16 +1,28 @@
-DROP DATABASE IF EXISTS bamazonDB;
-CREATE database bamazonDB;
+DROP DATABASE IF EXISTS seinfield_db;
+CREATE database seinfield_db;
 
-USE bamazonDB;
+USE seinfield_db;
 
-CREATE TABLE products (
-  item_id INT(11) NOT NULL,
-  product_name VARCHAR(100) NULL,
-  department_name VARCHAR(100) NULL,
-  price DECIMAL(10,2) NULL,
-  UM varchar(100) null,
-  stock_quantity int(10) NULL,
+CREATE TABLE actors (
+item_id INT NOT NULL AUTO_INCREMENT,
+  name VARCHAR(100) NULL,
+  coolness_points int(11),
+  attitude VARCHAR(100) NULL,
   PRIMARY KEY (item_id)
 );
 
-SELECT * FROM products;
+
+INSERT INTO actors (name, coolness_points, attitude)
+VALUES ("Jerry", 10, "some");
+
+INSERT INTO actors (name, coolness_points, attitude)
+VALUES ("Kramer", 9, "strange");
+
+INSERT INTO actors (name, coolness_points, attitude)
+VALUES ("George", 8, "uptight");
+
+INSERT INTO actors (name, coolness_points, attitude)
+VALUES ("Elaine", 11, "needy");
+
+
+SELECT * FROM `actors` order by coolness_points

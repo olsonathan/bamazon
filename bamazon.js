@@ -39,14 +39,14 @@ function start() {
       type: "list",
       message: "What would you like to do?",
       choices: [
-        "Make a sandwhich tray?",
+        "Make a sandwich tray?",
         "Manage the system",
         "Exit"
       ]
     })
     .then(function(answer) {
       switch (answer.action) {
-      case "Make a sandwhich tray?":
+      case "Make a sandwich tray?":
         makeSandwhich();
         break;
 
@@ -83,7 +83,7 @@ function makeSandwhich() {
     {
       name: "bread",
       type: "list",
-      message: "What kind of bread do you want for your sandwhich tray?",
+      message: "What kind of bread do you want for your sandwich tray?",
       choices: [
         "White bread",
         "Rye bread",
@@ -178,7 +178,7 @@ function chooseMeat() {
     {
       name: "meat",
       type: "list",
-      message: "What kind of meat do you want for your sandwhich tray?",
+      message: "What kind of meat do you want for your sandwich tray?",
       choices: [
         "Ham",
         "Roast beef",
@@ -264,7 +264,7 @@ function chooseProduce() {
     {
       name: "veg",
       type: "list",
-      message: "What kind of vegtables do you want for your sandwhich tray?",
+      message: "What kind of vegtables do you want for your sandwich tray?",
       choices: [
         "Lettuce",
         "Tomato",
@@ -356,7 +356,7 @@ function chooseCheese() {
     {
       name: "cheese",
       type: "list",
-      message: "What kind of cheese do you want for your sandwhich tray?",
+      message: "What kind of cheese do you want for your sandwich tray?",
       choices: [
         "American cheese",
         "Swiss cheese", 
@@ -444,7 +444,7 @@ function chooseCheese() {
       {
         name: "condiment",
         type: "list",
-        message: "What kind of condiments do you want for your sandwhich tray?",
+        message: "What kind of condiments do you want for your sandwich tray?",
         choices: [
           "Honey Mustard",
           "BBQ Sauce",
@@ -663,7 +663,7 @@ function chooseCheese() {
             choices: [
               "Check Stock",
               "Restock the items?",
-              "Enter a sandwhich order"
+              "Enter a sandwich order"
             ]
           })
           .then(function(answer) {
@@ -677,7 +677,7 @@ function chooseCheese() {
               break;
       
                      
-            case "Enter a sandwhich order":
+            case "Enter a sandwich order":
                 start()
               break;
             }
